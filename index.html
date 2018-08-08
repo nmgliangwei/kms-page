@@ -1,64 +1,372 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
    "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <title>KMS一键激活Windows所有版本、office所有版本</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="robots" content="noindex" />
-    <style type="text/css">
-    <!--
-    body {
-        color: #444444;
-        background-color: #EEEEEE;
-        font-family: 'Trebuchet MS', sans-serif;
-        font-size: 80%;
-    }
-    h1 {}
-    h2 { font-size: 1.2em; }
-    #page{
-        background-color: #FFFFFF;
-        width: 60%;
-        margin: 24px auto;
-        padding: 12px;
-    }
-    #header {
-        padding: 6px ;
-        text-align: center;
-    }
-    .status3xx { background-color: #475076; color: #FFFFFF; }
-    .status4xx { background-color: #0099FF; color: #FFFFFF; }
-    .status5xx { background-color: #F2E81A; color: #000000; }
-    #content {
-        padding: 4px 0 24px 0;
-    }
-    #footer {
-        color: #666666;
-        background: #f9f9f9;
-        padding: 10px 20px;
-        border-top: 5px #efefef solid;
-        font-size: 1em;
-        text-align: center;
-    }
-    #footer a {
-        color: #999999;
-    }
-    -->
-    </style>
-</head>
-<body>
-    <div id="page">
-        <div id="header" class="status4xx">
-            <h1>KMS</h1>
-        </div>
-      <div id="content">
-      <h2>slmgr.vbs /upk</h2>
-      <h2>slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43</h2>
-      <h2>slmgr /skms kms.ddz.red</h2>
-      <h2>slmgr /ato</h2>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <title>KMS一键激活Windows所有版本、office所有版本</title> 
+  <meta name="description" content="KMS一键激活Windows所有版本、office所有版本,windows10企业版激活,windows10激活,office激活  " />
+  <link rel="stylesheet" href="static/css/fontawesome.css" type="text/css" /> 
+  <link rel="stylesheet" href="static/css/style.min.css" type="text/css" /> 
+ </head> 
+ <body> 
+   <div id="blog"> 
+    <div id="main" data-behavior="1" class="hasCoverMetaIn"> 
+      <div class="post-header main-content-wrap text-left"> 
+       <h1 class="post-title" itemprop="headline">KMS一键激活Windows所有版本、office所有版本 </h1> 
       </div>
-      <div id="footer">
-        <p>Powered by <a href="#" rel="nofollow">ddz.red</a></p><br />
-      </div>
-    </div>
-</body>
+       <div class="main-content-wrap" id="yl"> 
+        <h2>使用方法</h2> 
+        <h3><strong>激活 Windows</strong></h3> 
+        <ul> 
+         <li class="fen">如果你的 Windows 是 VL 版本，那么只要在管理员权限的 cmd 或者 powershell 中执行下面两个命令就可以了。执行完第一个命令后要等弹出提示窗，期间电脑必须联网。</li> 
+       	 </ul> 
+        <pre><code class="hljs nginx"><span class="hljs-attribute">slmgr</span> /skms kms.ddz.red
+slmgr /ato
+</code></pre> 
+		<ul>
+        <li class="fen"> <p>如果不是 VL 版本的，那么需要更换密钥获取你对应版本的 KEY，操作如下：<br />运行以下命令查看系统版本：</p></li> 
+		</ul>
+        <pre><code class="hljs cs">wmic os <span class="hljs-keyword">get</span> caption
+</code></pre> 
+		<ul>
+        <li class="fen"> <p>在文末找到对应的 key，在管理员权限的 cmd 或者 powershell 中执行下面命令安装 key：</p> </li> 
+		</ul>
+        <pre><code class="hljs nginx"><span class="hljs-attribute">slmgr</span> /ipk xxxxx-xxxxx-xxxxx-xxxxx
+</code></pre> 
+        <p>然后跟上面说的一样设置 kms 服务器地址，激活。</p> 
+	
+		<h3><strong>例如：新装windows10企业版之后如何激活 </strong></h3> 
+		<ul> 
+         <li class="fen">如果你是新装的或者已经安装好了windows10企业版那么只需要复制下面命令在直接管理员权限的cmd或者powershell中执行即可。</li> 
+        </ul>
+		<pre><code class="hljs nginx">slmgr.vbs /upk
+slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
+slmgr /skms kms.ddz.red
+slmgr /ato
+</code></pre>
+		
+        <h3><strong>激活 Office</strong></h3> 
+        <ul> 
+         <li class="fen">你安装的 Office 必须是 VOL 版本，否则无法激活，可以从 msdn.itellyou.cn 上下载。Office 2016 是 Office16，Office 2013 是 Office15，以此类推。<br />在管理员权限的 cmd 或者 powershell 中执行下面命令，进入 32 位 Office 2016 的安装目录：<p></p></li> 
+        </ul> 
+        <pre><code class="hljs bash"><span class="hljs-built_in">cd</span> <span class="hljs-string">&quot;C:\Program Files (x86)\Microsoft Office\Office16&quot;</span>
+</code></pre> 
+        <ul> 
+         <li class="fen">在管理员权限的 cmd 或者 powershell 中执行下面命令，进入 64 位 Office 2016 的安装目录：<p></p></li> 
+        </ul> 
+        <pre><code class="hljs bash"><span class="hljs-built_in">cd</span> <span class="hljs-string">&quot;C:\Program Files\Microsoft Office\Office16&quot;</span>
+</code></pre> 
+        <ul> 
+         <li class="fen">在管理员权限的 cmd 或者 powershell 中执行下面两个命令。执行完第一个命令后要等待命令行出现反馈提示，期间电脑必须联网。<p></p></li> 
+        </ul> 
+        <pre><code class="hljs nginx"><span class="hljs-attribute">cscript</span> ospp.vbs /sethst:kms.ddz.red
+cscript ospp.vbs /act
+</code></pre> 
+        <ul> 
+         <li class="fen">如果提示看到 successful 的字样，那么就是激活成功了，重新打开 office 就好。<p></p></li> 
+        </ul> 
+        <a pjax="no" name="_label3"></a>
+        <h2>Windows VL 密钥对照表(以下内容来自微软官方公开的序列号，请放心使用)</h2> 
+        <p><strong>Windows Server 2016</strong></p> 
+        <table>
+         <thead>
+          <tr>
+           <th>操作系统</th>
+           <th> KMS 激活序列号</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td> Windows Server 2016 Datacenter</td>
+           <td>CB7KF-BWN84-R7R2Y-793K2-8XDDG</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2016 Standard</td>
+           <td>WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2016 Essentials</td>
+           <td>JCKRF-N37P4-C2D82-9YXRT-4M63B</td>
+          </tr>
+         </tbody>
+        </table> 
+        <p><strong>Windows 10</strong></p> 
+        <table>
+         <thead>
+          <tr>
+           <th>操作系统</th>
+           <th> KMS 激活序列号</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td> Windows 10 Professional</td>
+           <td>W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
+          </tr>
+          <tr>
+           <td>Windows 10 Professional N</td>
+           <td>MH37W-N47XK-V7XM9-C7227-GCQG9</td>
+          </tr>
+          <tr>
+           <td>Windows 10 Enterprise</td>
+           <td>NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
+          </tr>
+          <tr>
+           <td>Windows 10 Enterprise N</td>
+           <td>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
+          </tr>
+          <tr>
+           <td>Windows 10 Education</td>
+           <td>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
+          </tr>
+          <tr>
+           <td>Windows 10 Education N</td>
+           <td>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
+          </tr>
+          <tr>
+           <td>Windows 10 Enterprise 2015 LTSB</td>
+           <td>WNMTR-4C88C-JK8YV-HQ7T2-76DF9</td>
+          </tr>
+          <tr>
+           <td>Windows 10 Enterprise 2015 LTSB N</td>
+           <td>2F77B-TNFGY-69QQF-B8YKP-D69TJ</td>
+          </tr>
+          <tr>
+           <td>Windows 10 Enterprise 2016 LTSB</td>
+           <td>DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</td>
+          </tr>
+          <tr>
+           <td>Windows 10 Enterprise 2016 LTSB N</td>
+           <td>QFFDN-GRT3P-VKWWX-X7T3R-8B639</td>
+          </tr>
+         </tbody>
+        </table> 
+        <p><strong>Windows Server 2012 R2 和 Windows 8.1</strong></p> 
+        <table>
+         <thead>
+          <tr>
+           <th>操作系统</th>
+           <th> KMS 激活序列号</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td> Windows 8.1 Professional</td>
+           <td>GCRJD-8NW9H-F2CDX-CCM8D-9D6T9</td>
+          </tr>
+          <tr>
+           <td>Windows 8.1 Professional N</td>
+           <td>HMCNV-VVBFX-7HMBH-CTY9B-B4FXY</td>
+          </tr>
+          <tr>
+           <td>Windows 8.1 Enterprise</td>
+           <td>MHF9N-XY6XB-WVXMC-BTDCT-MKKG7</td>
+          </tr>
+          <tr>
+           <td>Windows 8.1 Enterprise N</td>
+           <td>TT4HM-HN7YT-62K67-RGRQJ-JFFXW</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 R2 Server Standard</td>
+           <td>D2N9P-3P6X9-2R39C-7RTCD-MDVJX</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 R2 Datacenter</td>
+           <td>W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 R2 Essentials</td>
+           <td>KNC87-3J2TX-XB4WP-VCPJV-M4FWM</td>
+          </tr>
+         </tbody>
+        </table> 
+        <p><strong>Windows Server 2012 和 Windows 8</strong></p> 
+        <table>
+         <thead>
+          <tr>
+           <th>操作系统</th>
+           <th> KMS 激活序列号</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td> Windows 8 Professional</td>
+           <td>NG4HW-VH26C-733KW-K6F98-J8CK4</td>
+          </tr>
+          <tr>
+           <td>Windows 8 Professional N</td>
+           <td>XCVCF-2NXM9-723PB-MHCB7-2RYQQ</td>
+          </tr>
+          <tr>
+           <td>Windows 8 Enterprise</td>
+           <td>32JNW-9KQ84-P47T8-D8GGY-CWCK7</td>
+          </tr>
+          <tr>
+           <td>Windows 8 Enterprise N</td>
+           <td>JMNMF-RHW7P-DMY6X-RF3DR-X2BQT</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012</td>
+           <td>BN3D2-R7TKB-3YPBD-8DRP2-27GG4</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 N</td>
+           <td>8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 Single Language</td>
+           <td>2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 Country Specific</td>
+           <td>4K36P-JN4VD-GDC6V-KDT89-DYFKP</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 Server Standard</td>
+           <td>XC9B7-NBPP2-83J2H-RHMBY-92BT4</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 MultiPoint Standard</td>
+           <td>HM7DN-YVMH3-46JC3-XYTG7-CYQJJ</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 MultiPoint Premium</td>
+           <td>XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2012 Datacenter</td>
+           <td>48HP8-DN98B-MYWDG-T2DCC-8W83P</td>
+          </tr>
+         </tbody>
+        </table> 
+        <p><strong>Windows 7 and Windows Server 2008 R2</strong></p> 
+        <table>
+         <thead>
+          <tr>
+           <th>操作系统</th>
+           <th> KMS 激活序列号</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td> Windows 7 Professional</td>
+           <td>FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</td>
+          </tr>
+          <tr>
+           <td>Windows 7 Professional N</td>
+           <td>MRPKT-YTG23-K7D7T-X2JMM-QY7MG</td>
+          </tr>
+          <tr>
+           <td>Windows 7 Professional E</td>
+           <td>W82YF-2Q76Y-63HXB-FGJG9-GF7QX</td>
+          </tr>
+          <tr>
+           <td>Windows 7 Enterprise</td>
+           <td>33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</td>
+          </tr>
+          <tr>
+           <td>Windows 7 Enterprise N</td>
+           <td>YDRBP-3D83W-TY26F-D46B2-XCKRJ</td>
+          </tr>
+          <tr>
+           <td>Windows 7 Enterprise E</td>
+           <td>C29WB-22CC8-VJ326-GHFJW-H9DH4</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 R2 Web</td>
+           <td>6TPJF-RBVHG-WBW2R-86QPH-6RTM4</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 R2 HPC edition</td>
+           <td>TT8MH-CG224-D3D7Q-498W2-9QCTX</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 R2 Standard</td>
+           <td>YC6KT-GKW9T-YTKYR-T4X34-R7VHC</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 R2 Enterprise</td>
+           <td>489J6-VHDMP-X63PK-3K798-CPX3Y</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 R2 Datacenter</td>
+           <td>74YFP-3QFB3-KQT8W-PMXWJ-7M648</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 R2 for Itanium-based Systems</td>
+           <td>GT63C-RJFQ3-4GMB6-BRFB9-CB83V</td>
+          </tr>
+         </tbody>
+        </table> 
+        <p><strong>Windows Vista and Windows Server 2008</strong></p> 
+        <table>
+         <thead>
+          <tr>
+           <th>操作系统</th>
+           <th> KMS 激活序列号</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td> Windows Vista Business</td>
+           <td>YFKBB-PQJJV-G996G-VWGXY-2V3X8</td>
+          </tr>
+          <tr>
+           <td>Windows Vista Business N</td>
+           <td>HMBQG-8H2RH-C77VX-27R82-VMQBT</td>
+          </tr>
+          <tr>
+           <td>Windows Vista Enterprise</td>
+           <td>VKK3X-68KWM-X2YGT-QR4M6-4BWMV</td>
+          </tr>
+          <tr>
+           <td>Windows Vista Enterprise N</td>
+           <td>VTC42-BM838-43QHV-84HX6-XJXKV</td>
+          </tr>
+          <tr>
+           <td>Windows Web Server 2008</td>
+           <td>WYR28-R7TFJ-3X2YQ-YCY4H-M249D</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 Standard</td>
+           <td>TM24T-X9RMF-VWXK6-X8JC9-BFGM2</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 Standard without Hyper-V</td>
+           <td>W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 Enterprise</td>
+           <td>YQGMW-MPWTJ-34KDK-48M3W-X4Q6V</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 Enterprise without Hyper-V</td>
+           <td>39BXF-X8Q23-P2WWT-38T2F-G3FPG</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 HPC</td>
+           <td>RCTX3-KWVHP-BR6TB-RB6DM-6X7HP</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 Datacenter</td>
+           <td>7M67G-PC374-GR742-YH8V4-TCBY3</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 Datacenter without Hyper-V</td>
+           <td>22XQ2-VRXRG-P8D42-K34TD-G3QQC</td>
+          </tr>
+          <tr>
+           <td>Windows Server 2008 for Itanium-Based Systems</td>
+           <td>4DWFP-JF3DJ-B7DTH-78FJB-PDRHK</td>
+          </tr>
+         </tbody>
+        </table> 
+		</div>
+		<div id="footer">
+        <p>Powered by <a href="#" rel="nofollow">ddz.red</a></p>
+		<p>如有任何问题请联系nmgliangwei@gmail.com</p>
+		</div>
+       </div>  
+      </div> 
+ </body>
 </html>
